@@ -26,6 +26,8 @@ h1 {
   display: flex;
   background: fixed;
   position: relative;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .big-text {
