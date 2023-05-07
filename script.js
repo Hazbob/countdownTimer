@@ -6,16 +6,16 @@ const minutesEl = document.querySelector("#minutes");
 const secondsEl = document.querySelector("#seconds");
 const elArray = [daysEl, hoursEl, minutesEl, secondsEl];
 const eventEl = document.querySelector("#event-name");
-const birthday = prompt(
+const eventDate = prompt(
   "What Date Are You Waiting For?\nEnter Date...\n(format example:1 jun 2023)"
 );
 const eventName = prompt("Enter Event Name...");
 eventEl.innerHTML = eventName;
 
 const countdown = function () {
-  const birtDate = new Date(birthday);
+  const eventDateFormat = new Date(eventDate);
   const currentDate = new Date();
-  const distance = birtDate - currentDate;
+  const distance = eventDateFormat - currentDate;
   const days = Math.floor(distance / (1000 * 60 * 60 * 24));
   const hours = Math.floor(
     (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
